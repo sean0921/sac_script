@@ -24,8 +24,8 @@ do cd $j
     echo "w append $name_tail" >> run.bash
     echo "quit" >> run.bash
     echo "END" >> run.bash
-    /usr/bin/env bash run.bash
-    rm run.bash
+    mv run.bash run_"$i".bash
+    /usr/bin/env bash run_"$i".bash
     done
     cd -
 done
